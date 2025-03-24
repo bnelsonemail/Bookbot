@@ -21,3 +21,17 @@ def char_count(text):
     return char_dict
 
 
+def sort_on(item):
+    return item["count"]
+
+
+def sort_char_dict(char_dict):
+    """Convert to list of dicts, filter for a-z, sort descending."""
+    sorted_chars = []
+
+    for char, count in char_dict.items():
+        if char.isalpha():  # Only include alphabetic characters
+            sorted_chars.append({"char": char, "count": count})
+
+    sorted_chars.sort(reverse=True, key=sort_on)
+    return sorted_chars

@@ -1,7 +1,4 @@
 
-
-
-
 def word_count(book):
     """Counts the words in the book (case-insensitive)."""
     book = book.lower()  # Convert to lowercase early on
